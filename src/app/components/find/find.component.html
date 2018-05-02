@@ -5,7 +5,18 @@
     <div class="panel-body">
     <div class="list-group">
         <div class="list-group-item list-group-item-demo">
-               
+            <div class="form-group">
+                <input [(ngModel)]="hero.name" placeholder="Name" class="form-control" />
+            </div>
+            <div>
+                <button class="btn btn-primary btn-center" (click)="findHero()">Find Hero</button>
+            </div>
+            <div *ngIf="heroData">
+                {{ heroData.superPower }}
+            </div>
+            <div>
+                {{clientMessage.message}}
+            </div>
         </div>
     </div>
 </div>
